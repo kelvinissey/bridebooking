@@ -2,6 +2,10 @@
 
 A single-page bridal photography marketing and booking website. The entire site is one self-contained `index.html` — no build step, no dependencies, no framework.
 
+## Preview
+
+![Elysian Bridal Photography — full page preview](screenshots/preview.png)
+
 ## Features
 
 - **Hero** with full-viewport bridal imagery and dual CTAs
