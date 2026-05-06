@@ -1,0 +1,1025 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Elysian Bridal — fine-art bridal and wedding photography. Capturing the romance, the light, and the love of your forever day." />
+<meta property="og:title" content="Elysian Bridal Photography" />
+<meta property="og:description" content="Fine-art bridal photography. Romantic, timeless, unforgettable." />
+<title>Elysian Bridal Photography — Capturing Forever</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --blush-light: #fbe9e9;
+    --blush:       #f4e1e1;
+    --blush-deep:  #f9d6d6;
+    --rose:        #b76e79;
+    --rose-dark:   #8f4f5b;
+    --gold:        #c9a96e;
+    --gold-soft:   #d9c194;
+    --ivory:       #fbf7f2;
+    --cream:       #f5ede2;
+    --ink:         #3a2e2e;
+    --ink-soft:    #6b5c5c;
+    --shadow:      0 18px 40px -22px rgba(58, 46, 46, 0.35);
+    --shadow-lg:   0 30px 60px -28px rgba(58, 46, 46, 0.45);
+    --maxw:        1200px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(17px, 1.05vw + 14px, 20px);
+    line-height: 1.65;
+    color: var(--ink);
+    background: var(--ivory);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 500;
+    color: var(--ink);
+    letter-spacing: 0.01em;
+    margin: 0 0 0.5em;
+  }
+
+  h2 { font-size: clamp(2rem, 3.2vw + 1rem, 3.25rem); }
+  h3 { font-size: clamp(1.4rem, 1vw + 1rem, 1.85rem); }
+
+  p { margin: 0 0 1em; }
+
+  a { color: var(--rose-dark); text-decoration: none; transition: color 0.2s ease; }
+  a:hover { color: var(--gold); }
+
+  img { display: block; max-width: 100%; height: auto; }
+
+  .container {
+    width: min(100% - 2.5rem, var(--maxw));
+    margin-inline: auto;
+  }
+
+  section { padding: clamp(4rem, 8vw, 7rem) 0; }
+
+  .eyebrow {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(1.6rem, 2vw + 0.5rem, 2.4rem);
+    color: var(--rose);
+    line-height: 1;
+    margin-bottom: 0.4rem;
+    display: inline-block;
+  }
+
+  .section-head {
+    text-align: center;
+    margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  }
+
+  .section-head .divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+    color: var(--gold);
+  }
+  .section-head .divider::before,
+  .section-head .divider::after {
+    content: "";
+    width: 60px;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.7;
+  }
+  .section-head .divider span { font-size: 0.75rem; letter-spacing: 0.4em; text-transform: uppercase; }
+
+  /* ===== Navigation ===== */
+  .nav {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 50;
+    padding: 1rem 0;
+    transition: background 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
+  }
+  .nav.scrolled {
+    background: rgba(251, 247, 242, 0.92);
+    box-shadow: 0 4px 24px -16px rgba(58,46,46,0.4);
+    backdrop-filter: blur(8px);
+    padding: 0.6rem 0;
+  }
+  .nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ivory);
+    transition: color 0.3s ease;
+  }
+  .brand span { font-family: 'Great Vibes', cursive; text-transform: none; letter-spacing: 0; color: var(--gold-soft); font-size: 1.7rem; margin-right: 0.15em; }
+  .nav.scrolled .brand { color: var(--ink); }
+  .nav.scrolled .brand span { color: var(--rose); }
+
+  .nav-links {
+    display: none;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-links a {
+    color: var(--ivory);
+    font-family: 'Playfair Display', serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+  }
+  .nav.scrolled .nav-links a { color: var(--ink); }
+  .nav-links a:hover { color: var(--gold-soft); }
+  .nav.scrolled .nav-links a:hover { color: var(--rose); }
+
+  .nav-cta {
+    display: none;
+    padding: 0.55rem 1.3rem;
+    border: 1px solid var(--gold-soft);
+    color: var(--ivory);
+    font-family: 'Playfair Display', serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    border-radius: 999px;
+    transition: all 0.25s ease;
+  }
+  .nav.scrolled .nav-cta { color: var(--rose-dark); border-color: var(--rose); }
+  .nav-cta:hover { background: var(--gold); color: var(--ivory); border-color: var(--gold); }
+  .nav.scrolled .nav-cta:hover { background: var(--rose); color: var(--ivory); border-color: var(--rose); }
+
+  .menu-btn {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: 0;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+  .menu-btn span {
+    width: 26px;
+    height: 1.5px;
+    background: var(--ivory);
+    transition: background 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+  }
+  .nav.scrolled .menu-btn span { background: var(--ink); }
+  .menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+  .mobile-menu {
+    position: fixed;
+    inset: 64px 0 auto 0;
+    background: rgba(251, 247, 242, 0.98);
+    backdrop-filter: blur(10px);
+    padding: 2rem 0;
+    transform: translateY(-110%);
+    transition: transform 0.35s ease;
+    box-shadow: 0 12px 30px -20px rgba(58,46,46,0.4);
+  }
+  .mobile-menu.open { transform: translateY(0); }
+  .mobile-menu ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.25rem; text-align: center; }
+  .mobile-menu a {
+    color: var(--ink);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: 768px) {
+    .nav-links { display: flex; }
+    .nav-cta { display: inline-flex; }
+    .menu-btn, .mobile-menu { display: none; }
+  }
+
+  /* ===== Buttons ===== */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.95rem 2.1rem;
+    border-radius: 999px;
+    font-family: 'Playfair Display', serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.25s ease;
+    text-decoration: none;
+  }
+  .btn-primary { background: var(--rose); color: var(--ivory); }
+  .btn-primary:hover { background: var(--rose-dark); color: var(--ivory); transform: translateY(-2px); box-shadow: var(--shadow); }
+  .btn-ghost { background: transparent; color: var(--ivory); border-color: var(--ivory); }
+  .btn-ghost:hover { background: var(--ivory); color: var(--rose-dark); transform: translateY(-2px); }
+  .btn-gold { background: var(--gold); color: var(--ivory); }
+  .btn-gold:hover { background: var(--rose); color: var(--ivory); }
+  .btn-outline { background: transparent; color: var(--rose-dark); border-color: var(--rose); }
+  .btn-outline:hover { background: var(--rose); color: var(--ivory); }
+
+  /* ===== Hero ===== */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    color: var(--ivory);
+    overflow: hidden;
+    padding: 7rem 1.25rem 4rem;
+  }
+  .hero::before {
+    content: "";
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(180deg, rgba(58,46,46,0.45) 0%, rgba(58,46,46,0.55) 100%),
+      url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1800&q=80&auto=format&fit=crop') center/cover no-repeat;
+    z-index: -1;
+  }
+  .hero-inner { max-width: 800px; }
+  .hero .script {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(2.5rem, 5vw + 1rem, 4.5rem);
+    color: var(--gold-soft);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  .hero h1 {
+    color: var(--ivory);
+    font-size: clamp(2.6rem, 5vw + 1rem, 5rem);
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    line-height: 1.1;
+    margin-bottom: 1.2rem;
+  }
+  .hero p.lead {
+    font-size: clamp(1.05rem, 0.5vw + 1rem, 1.3rem);
+    max-width: 540px;
+    margin: 0 auto 2.4rem;
+    color: rgba(251, 247, 242, 0.92);
+    font-weight: 300;
+    font-style: italic;
+  }
+  .hero-cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+  .hero-scroll {
+    position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+    color: var(--ivory); opacity: 0.85;
+    font-size: 0.7rem; letter-spacing: 0.4em; text-transform: uppercase;
+    display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+  }
+  .hero-scroll::after {
+    content: ""; width: 1px; height: 36px;
+    background: var(--gold-soft);
+    animation: drop 1.8s ease-in-out infinite;
+  }
+  @keyframes drop { 0%,100% { transform: scaleY(0.6); opacity: 0.4 } 50% { transform: scaleY(1); opacity: 1 } }
+
+  /* ===== About ===== */
+  .about { background: linear-gradient(180deg, var(--ivory) 0%, var(--cream) 100%); }
+  .about-grid {
+    display: grid;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: center;
+  }
+  .about-img {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: var(--shadow-lg);
+  }
+  .about-img img { width: 100%; height: 100%; object-fit: cover; }
+  .about-img::after {
+    content: "";
+    position: absolute; inset: 1.25rem;
+    border: 1px solid rgba(251, 247, 242, 0.65);
+    pointer-events: none;
+  }
+  .about h2 { margin-bottom: 1.2rem; }
+  .about .signature {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.4rem;
+    color: var(--rose);
+    margin-top: 1.2rem;
+    line-height: 1;
+  }
+  .about .signature + small {
+    color: var(--ink-soft);
+    letter-spacing: 0.25em;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    display: block;
+  }
+  @media (min-width: 768px) {
+    .about-grid { grid-template-columns: 1fr 1.2fr; }
+  }
+
+  /* ===== Packages ===== */
+  .packages { background: var(--blush); }
+  .pkg-grid {
+    display: grid;
+    gap: 1.75rem;
+    grid-template-columns: 1fr;
+  }
+  .pkg-card {
+    background: var(--ivory);
+    border-radius: 6px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  .pkg-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+  .pkg-card.featured {
+    background: linear-gradient(180deg, var(--ivory) 0%, var(--blush-light) 100%);
+    transform: translateY(-8px);
+  }
+  .pkg-card.featured::before {
+    content: "Most Loved";
+    position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%);
+    background: var(--gold);
+    color: var(--ivory);
+    font-family: 'Playfair Display', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    padding: 0.45rem 1.2rem;
+    border-radius: 999px;
+    box-shadow: var(--shadow);
+  }
+  .pkg-card h3 { color: var(--rose-dark); margin-bottom: 0.25rem; }
+  .pkg-card .price {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    color: var(--ink);
+    margin: 1rem 0 0.25rem;
+  }
+  .pkg-card .price small { font-size: 0.9rem; color: var(--ink-soft); display: block; letter-spacing: 0.2em; text-transform: uppercase; margin-top: 0.25rem; }
+  .pkg-divider {
+    height: 1px;
+    width: 50px;
+    background: var(--gold);
+    margin: 1.4rem auto;
+    opacity: 0.7;
+  }
+  .pkg-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+    text-align: left;
+    flex: 1;
+  }
+  .pkg-card li {
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    position: relative;
+    color: var(--ink-soft);
+    border-bottom: 1px solid rgba(201, 169, 110, 0.18);
+  }
+  .pkg-card li:last-child { border-bottom: 0; }
+  .pkg-card li::before {
+    content: "✦";
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 0.85rem;
+    top: 0.65rem;
+  }
+  @media (min-width: 768px) {
+    .pkg-grid { grid-template-columns: repeat(3, 1fr); align-items: stretch; }
+  }
+
+  /* ===== Gallery ===== */
+  .gallery { background: var(--ivory); }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    aspect-ratio: 1;
+    cursor: zoom-in;
+  }
+  .gallery-item.tall { aspect-ratio: 3 / 4; }
+  .gallery-item.wide { aspect-ratio: 4 / 3; grid-column: span 2; }
+  .gallery-item img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease, filter 0.6s ease;
+  }
+  .gallery-item::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(58,46,46,0) 50%, rgba(58,46,46,0.35) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  .gallery-item:hover img { transform: scale(1.06); }
+  .gallery-item:hover::after { opacity: 1; }
+  @media (min-width: 768px) {
+    .gallery-grid { grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+    .gallery-item.wide { grid-column: span 2; }
+    .gallery-item.tall { grid-row: span 2; aspect-ratio: auto; }
+  }
+
+  /* ===== Booking ===== */
+  .booking {
+    background:
+      linear-gradient(180deg, rgba(244,225,225,0.6) 0%, rgba(249,214,214,0.65) 100%),
+      url('https://images.unsplash.com/photo-1606490194859-07c18c9f0968?w=1600&q=70&auto=format&fit=crop') center/cover fixed;
+  }
+  .booking-card {
+    background: var(--ivory);
+    border-radius: 8px;
+    padding: clamp(2rem, 4vw, 3.5rem);
+    box-shadow: var(--shadow-lg);
+    max-width: 880px;
+    margin-inline: auto;
+  }
+  .form-grid {
+    display: grid;
+    gap: 1.25rem 1.5rem;
+    grid-template-columns: 1fr;
+  }
+  .field { display: flex; flex-direction: column; }
+  .field.full { grid-column: 1 / -1; }
+  .field label {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 0.5rem;
+  }
+  .field label .req { color: var(--rose); }
+  .field input,
+  .field select,
+  .field textarea {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.05rem;
+    color: var(--ink);
+    background: var(--cream);
+    border: 1px solid transparent;
+    border-bottom: 1px solid rgba(58,46,46,0.18);
+    padding: 0.85rem 1rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    width: 100%;
+  }
+  .field textarea { min-height: 120px; resize: vertical; }
+  .field input:focus,
+  .field select:focus,
+  .field textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    background: var(--ivory);
+    box-shadow: 0 0 0 4px rgba(201,169,110,0.18);
+  }
+  .field input:invalid:not(:placeholder-shown) {
+    border-bottom-color: var(--rose);
+  }
+  .honeypot { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+
+  .form-foot {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+  }
+  .form-foot small { color: var(--ink-soft); }
+
+  .form-status {
+    margin-top: 1.5rem;
+    padding: 1rem 1.2rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    display: none;
+  }
+  .form-status.error {
+    display: block;
+    background: rgba(183, 110, 121, 0.12);
+    color: var(--rose-dark);
+    border-left: 3px solid var(--rose);
+  }
+
+  .success-card {
+    text-align: center;
+    padding: 1rem 0;
+  }
+  .success-card .check {
+    width: 84px; height: 84px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    background: var(--blush-light);
+    display: grid; place-items: center;
+    color: var(--rose);
+  }
+  .success-card h3 { font-size: 2rem; }
+  .success-card .script {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    color: var(--gold);
+    margin: 0.5rem 0 1rem;
+  }
+  .hidden { display: none !important; }
+
+  @media (min-width: 768px) {
+    .form-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* ===== Contact ===== */
+  .contact { background: var(--cream); }
+  .contact-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .contact-item h4 {
+    font-size: 0.78rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--rose);
+    margin-bottom: 0.6rem;
+  }
+  .contact-item p { color: var(--ink); font-size: 1.1rem; line-height: 1.5; }
+  .contact-item a { color: var(--ink); }
+  .contact-item a:hover { color: var(--rose); }
+
+  .socials {
+    display: flex; justify-content: center; gap: 1rem; margin-top: 1rem;
+  }
+  .socials a {
+    width: 42px; height: 42px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    display: grid; place-items: center;
+    color: var(--rose-dark);
+    transition: all 0.25s ease;
+  }
+  .socials a:hover {
+    background: var(--rose); color: var(--ivory); border-color: var(--rose);
+    transform: translateY(-3px);
+  }
+  .socials svg { width: 18px; height: 18px; }
+
+  @media (min-width: 768px) {
+    .contact-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  /* ===== Footer ===== */
+  footer {
+    background: var(--ink);
+    color: rgba(251,247,242,0.75);
+    text-align: center;
+    padding: 2.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  footer .brand { color: var(--ivory); display: inline-block; margin-bottom: 0.6rem; }
+  footer p { margin: 0.4rem 0; }
+  footer .small { font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(251,247,242,0.5); }
+
+  /* ===== Reveal animation ===== */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.9s ease, transform 0.9s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      transition-duration: 0.001ms !important;
+    }
+    .reveal { opacity: 1; transform: none; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="container">
+    <a href="#top" class="brand"><span>E</span>lysian</a>
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="#booking" class="nav-cta">Book Now</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#packages">Packages</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#booking">Book Now</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===== Hero ===== -->
+  <section class="hero" aria-label="Hero">
+    <div class="hero-inner">
+      <span class="script">A love story in light</span>
+      <h1>Capturing Forever</h1>
+      <p class="lead">Fine-art bridal photography for the romantics, the dreamers, and the timelessly in love.</p>
+      <div class="hero-cta">
+        <a href="#packages" class="btn btn-gold">View Packages</a>
+        <a href="#booking" class="btn btn-ghost">Book Your Date</a>
+      </div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">Scroll</div>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section id="about" class="about" aria-labelledby="about-h">
+    <div class="container about-grid reveal">
+      <div class="about-img">
+        <img src="https://images.unsplash.com/photo-1525258946800-98cfd641d0de?w=900&q=80&auto=format&fit=crop" alt="Bride in soft window light, holding a bouquet" loading="lazy" />
+      </div>
+      <div>
+        <span class="eyebrow">Hello, I'm Elysia</span>
+        <h2 id="about-h">A photographer in love<br/>with love.</h2>
+        <p>For over a decade I've been quietly tucked behind the lens at the most tender moments of a wedding day &mdash; the breath before the veil lifts, the laughter shared between bride and bouquet, the gold of late afternoon falling across lace.</p>
+        <p>My approach is unhurried, romantic, and deeply personal. Together we'll create heirlooms your great-grandchildren will treasure.</p>
+        <div class="signature">Elysia Rose</div>
+        <small>Founder &amp; lead photographer</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Packages ===== -->
+  <section id="packages" class="packages" aria-labelledby="pkg-h">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Investment</span>
+        <h2 id="pkg-h">Bridal Collections</h2>
+        <div class="divider"><span>Choose your story</span></div>
+      </div>
+
+      <div class="pkg-grid">
+        <article class="pkg-card reveal">
+          <h3>Essential</h3>
+          <small style="letter-spacing:0.25em; text-transform:uppercase; color: var(--ink-soft); font-size:0.72rem;">Intimate &amp; classic</small>
+          <div class="price">$1,800<small>4 hour coverage</small></div>
+          <div class="pkg-divider"></div>
+          <ul>
+            <li>Bridal portrait session</li>
+            <li>One photographer</li>
+            <li>150+ edited images</li>
+            <li>Online private gallery</li>
+            <li>Print release included</li>
+          </ul>
+          <button class="btn btn-outline" data-pkg="Essential">Book This Package</button>
+        </article>
+
+        <article class="pkg-card featured reveal">
+          <h3>Signature</h3>
+          <small style="letter-spacing:0.25em; text-transform:uppercase; color: var(--ink-soft); font-size:0.72rem;">Most beloved</small>
+          <div class="price">$3,200<small>8 hour coverage</small></div>
+          <div class="pkg-divider"></div>
+          <ul>
+            <li>Engagement &amp; bridal sessions</li>
+            <li>Two photographers</li>
+            <li>400+ edited images</li>
+            <li>Heirloom keepsake box</li>
+            <li>Sneak peek within 48 hours</li>
+            <li>Full-day timeline planning</li>
+          </ul>
+          <button class="btn btn-primary" data-pkg="Signature">Book This Package</button>
+        </article>
+
+        <article class="pkg-card reveal">
+          <h3>Luxury</h3>
+          <small style="letter-spacing:0.25em; text-transform:uppercase; color: var(--ink-soft); font-size:0.72rem;">All inclusive</small>
+          <div class="price">$5,400<small>Full weekend</small></div>
+          <div class="pkg-divider"></div>
+          <ul>
+            <li>Rehearsal, ceremony &amp; brunch</li>
+            <li>Two photographers + assistant</li>
+            <li>700+ edited images</li>
+            <li>Linen-bound fine-art album</li>
+            <li>Cinematic highlight reel</li>
+            <li>Travel within 200 miles included</li>
+          </ul>
+          <button class="btn btn-outline" data-pkg="Luxury">Book This Package</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Gallery ===== -->
+  <section id="gallery" class="gallery" aria-labelledby="gallery-h">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Portfolio</span>
+        <h2 id="gallery-h">Moments &amp; Memories</h2>
+        <div class="divider"><span>A glimpse of forever</span></div>
+      </div>
+
+      <div class="gallery-grid">
+        <figure class="gallery-item tall reveal">
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=900&q=80&auto=format&fit=crop" alt="Bride in white lace gown standing near a window" loading="lazy" />
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=800&q=80&auto=format&fit=crop" alt="Wedding bouquet of pink roses on a chair" loading="lazy" />
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&q=80&auto=format&fit=crop" alt="Bride and groom hands intertwined with rings" loading="lazy" />
+        </figure>
+        <figure class="gallery-item wide reveal">
+          <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1400&q=80&auto=format&fit=crop" alt="Couple walking in golden hour through a meadow" loading="lazy" />
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=800&q=80&auto=format&fit=crop" alt="Bride laughing with bridesmaids in soft light" loading="lazy" />
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?w=800&q=80&auto=format&fit=crop" alt="Reception table with candles and pink florals" loading="lazy" />
+        </figure>
+        <figure class="gallery-item tall reveal">
+          <img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=900&q=80&auto=format&fit=crop" alt="Bride's veil flowing in the breeze" loading="lazy" />
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?w=800&q=80&auto=format&fit=crop" alt="First dance at sunset" loading="lazy" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Booking ===== -->
+  <section id="booking" class="booking" aria-labelledby="booking-h">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow" style="color: var(--rose-dark);">Reserve</span>
+        <h2 id="booking-h">Book Your Date</h2>
+        <div class="divider"><span>Tell us your story</span></div>
+      </div>
+
+      <div class="booking-card reveal">
+        <div id="formError" class="form-status" role="status" aria-live="polite"></div>
+
+        <form id="bookingForm" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Full Name <span class="req">*</span></label>
+              <input type="text" id="name" name="name" autocomplete="name" required aria-required="true" placeholder="Jane Doe" />
+            </div>
+            <div class="field">
+              <label for="email">Email <span class="req">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" required aria-required="true" placeholder="you@example.com" />
+            </div>
+            <div class="field">
+              <label for="phone">Phone <span class="req">*</span></label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" required aria-required="true" pattern="[0-9+\-\s()]{7,}" placeholder="+1 555 000 0000" />
+            </div>
+            <div class="field">
+              <label for="people">Number of People <span class="req">*</span></label>
+              <input type="number" id="people" name="people" min="1" max="500" required aria-required="true" placeholder="e.g. 80" />
+            </div>
+            <div class="field">
+              <label for="date">Preferred Date <span class="req">*</span></label>
+              <input type="date" id="date" name="date" required aria-required="true" />
+            </div>
+            <div class="field">
+              <label for="time">Preferred Time <span class="req">*</span></label>
+              <input type="time" id="time" name="time" required aria-required="true" />
+            </div>
+            <div class="field">
+              <label for="package">Package <span class="req">*</span></label>
+              <select id="package" name="package" required aria-required="true">
+                <option value="" disabled selected>Select a collection</option>
+                <option value="Essential">Essential — $1,800</option>
+                <option value="Signature">Signature — $3,200</option>
+                <option value="Luxury">Luxury — $5,400</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="location">Location <span class="req">*</span></label>
+              <input type="text" id="location" name="location" required aria-required="true" placeholder="City, venue, or 'TBD'" />
+            </div>
+            <div class="field full">
+              <label for="message">Your Story <span style="color: var(--ink-soft); font-style: italic;">(optional)</span></label>
+              <textarea id="message" name="message" placeholder="Tell us a little about your day &mdash; the vibe, the venue, your dreams…"></textarea>
+            </div>
+            <div class="field full honeypot" aria-hidden="true">
+              <label for="company">Leave this field empty</label>
+              <input type="text" id="company" name="_honey" tabindex="-1" autocomplete="off" />
+            </div>
+          </div>
+
+          <div class="form-foot">
+            <button type="submit" id="submitBtn" class="btn btn-primary">Send Inquiry</button>
+            <small>We respond to every message within 24 hours.</small>
+          </div>
+        </form>
+
+        <div id="successCard" class="success-card hidden" role="status" aria-live="polite">
+          <div class="check" aria-hidden="true">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          </div>
+          <h3>Thank you</h3>
+          <div class="script">— with love —</div>
+          <p>Your inquiry has been sent. We'll be in touch within 24 hours to begin planning the most beautiful day of your life.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section id="contact" class="contact" aria-labelledby="contact-h">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Stay in touch</span>
+        <h2 id="contact-h">Find Us</h2>
+        <div class="divider"><span>We'd love to hear from you</span></div>
+      </div>
+
+      <div class="contact-grid reveal">
+        <div class="contact-item">
+          <h4>Email</h4>
+          <p><a href="mailto:hello@elysianbridal.com">hello@elysianbridal.com</a></p>
+        </div>
+        <div class="contact-item">
+          <h4>Phone</h4>
+          <p><a href="tel:+15550001234">+1 (555) 000-1234</a></p>
+        </div>
+        <div class="contact-item">
+          <h4>Studio</h4>
+          <p>14 Rose Lane<br/>Charleston, SC 29401</p>
+        </div>
+      </div>
+
+      <div class="socials reveal" aria-label="Social links">
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></svg>
+        </a>
+        <a href="#" aria-label="Pinterest">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M11 8c2 0 4 1 4 3.5S13 16 11.5 15c-1-.5-1 0-1.5 2L9 21"/></svg>
+        </a>
+        <a href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V7a2 2 0 0 1 2-2h2V2h-3a4 4 0 0 0-4 4v3H8v3h3v9h3v-9h3l1-3h-4z"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="brand"><span>E</span>lysian</div>
+  <p>Charleston · New Orleans · Anywhere love takes us</p>
+  <p class="small">&copy; 2026 Elysian Bridal Photography · All rights reserved</p>
+</footer>
+
+<script>
+  // Nav scroll state
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
+  document.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Mobile menu
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn?.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', String(open));
+  });
+  mobileMenu?.querySelectorAll('a').forEach(a =>
+    a.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    })
+  );
+
+  // Reveal on scroll
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  revealEls.forEach(el => io.observe(el));
+
+  // Date min = today
+  const dateInput = document.getElementById('date');
+  if (dateInput) {
+    const t = new Date();
+    const iso = new Date(t.getTime() - t.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+    dateInput.min = iso;
+  }
+
+  // Package preselect from cards
+  const pkgSelect = document.getElementById('package');
+  document.querySelectorAll('[data-pkg]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const value = btn.getAttribute('data-pkg');
+      if (pkgSelect) pkgSelect.value = value;
+      document.getElementById('booking').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setTimeout(() => document.getElementById('name')?.focus(), 700);
+    });
+  });
+
+  // Form submission
+  const form = document.getElementById('bookingForm');
+  const submitBtn = document.getElementById('submitBtn');
+  const errorBox = document.getElementById('formError');
+  const successCard = document.getElementById('successCard');
+
+  function showError(msg) {
+    errorBox.textContent = msg;
+    errorBox.classList.add('error');
+  }
+  function clearError() {
+    errorBox.classList.remove('error');
+    errorBox.textContent = '';
+  }
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    clearError();
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    const data = Object.fromEntries(new FormData(form).entries());
+
+    // FormSubmit metadata
+    const payload = {
+      ...data,
+      _subject: 'New Bridal Booking Inquiry',
+      _template: 'table',
+      _captcha: 'false'
+    };
+
+    submitBtn.disabled = true;
+    const originalLabel = submitBtn.textContent;
+    submitBtn.textContent = 'Sending…';
+
+    try {
+      const res = await fetch('https://formsubmit.co/ajax/kelvinissey@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      const result = await res.json().catch(() => ({}));
+
+      if (res.ok && (result.success === 'true' || result.success === true)) {
+        form.classList.add('hidden');
+        successCard.classList.remove('hidden');
+        successCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        throw new Error(result.message || 'Submission failed');
+      }
+    } catch (err) {
+      showError("We couldn't send your inquiry just now. Please try again, or email us directly at hello@elysianbridal.com.");
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalLabel;
+    }
+  });
+</script>
+
+</body>
+</html>
